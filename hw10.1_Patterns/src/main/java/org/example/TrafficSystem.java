@@ -1,6 +1,12 @@
 package org.example;
 
-import org.example.Factory.CarTrafficLightFactory;
+/**
+ Сделать завод светофоров под разные случаи.
+ Есть светофоры для машин, поездов, пешеходов и так далее.
+ Создать кейсы для воспроизведения этих светофоров в жизни.
+*/
+
+ import org.example.Factory.CarTrafficLightFactory;
 import org.example.Factory.PedestrianTrafficLightFactory;
 import org.example.Factory.TrafficLightFactory;
 import org.example.Factory.TrainTrafficLightFactory;

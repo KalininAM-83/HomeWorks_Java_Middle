@@ -1,5 +1,14 @@
 package autoservice.demo;
 
+/**
+ Закончите реализацию MyCache из вебинара. Используйте WeakHashMap для хранения значений.
+
+ Добавьте кэширование в DBService из задания про Hibernate ORM или "Самодельный ORM". Для простоты скопируйте нужные классы в это ДЗ.
+
+ Убедитесь, что ваш кэш действительно работает быстрее СУБД и сбрасывается при недостатке памяти.
+ Код предыдущего задания менять не надо. Просто скопируйте все нужные классы.
+ */
+
 import autoservice.entity.Car;
 import autoservice.entity.Owner;
 import autoservice.entity.TechnicalMaintenance;

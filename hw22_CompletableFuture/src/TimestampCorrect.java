@@ -15,7 +15,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 import java.util.function.Supplier;
 
-public class Timestamp {
+public class TimestampCorrect {
     //создаем тестовый метод с временными метками
     private static final Supplier<List<LocalDateTime>> timestampSupplier = () -> List.of(
             LocalDateTime.of(2021, 1, 11, 12, 11),
@@ -54,18 +54,27 @@ public class Timestamp {
         // Объединяем все CompletableFuture в один
         CompletableFuture<Void> allFutures = CompletableFuture.allOf(futures.toArray(new CompletableFuture[0]));
 
+    //    // Когда все задачи завершены, вычисляем среднюю разницу
+    //    CompletableFuture<Long> resultFuture = allFutures.thenApply(v ->  // todo все излишне усложнено - можно обойтись и без resultFuture
+    //            (long) futures.stream()
+    //                    .mapToLong(CompletableFuture::join)
+    //                    .average()
+    //                    .orElse(0.0));
+    //    try {
+    //        // Получаем и выводим результат
+    //        long averageDifference = resultFuture.get();
+    //        System.out.println("\nСредняя разница временных меток составляет " + averageDifference + " секунд");
+    //    } catch (InterruptedException | ExecutionException e) {
+    //        e.printStackTrace();
+    //    }
+
         // Когда все задачи завершены, вычисляем среднюю разницу
-        CompletableFuture<Long> resultFuture = allFutures.thenApply(v ->
-                (long) futures.stream()
-                        .mapToLong(CompletableFuture::join)
-                        .average()
-                        .orElse(0.0));
-        try {
-            // Получаем и выводим результат
-            long averageDifference = resultFuture.get();
-            System.out.println("\nСредняя разница временных меток составляет " + averageDifference + " секунд");
-        } catch (InterruptedException | ExecutionException e) {
-            e.printStackTrace();
-        }
+        long averageDifference = (long) futures.stream()
+                .mapToLong(CompletableFuture::join)
+                .average()
+                .orElse(0.0);
+
+        // Получаем и выводим результат
+        System.out.println("\nСредняя разница временных меток составляет " + averageDifference + " секунд");
     }
 }

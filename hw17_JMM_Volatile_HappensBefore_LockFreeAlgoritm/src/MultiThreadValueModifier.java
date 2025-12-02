@@ -6,7 +6,12 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import static java.lang.System.out;
 
-public class MultiThreadValueModifier {
+/**
+ Сделать многопоточную программу, которая уменьшает любое введенное значение на 2 500 000,
+ а затем увеличивает на 3 200 000 и делает все с шагом 1.
+*/
+
+ public class MultiThreadValueModifier {
     private static final int decrease_amount = 2500000;
     private static final int increase_amount = 3200000;
     private static final int threads = Runtime.getRuntime().availableProcessors();

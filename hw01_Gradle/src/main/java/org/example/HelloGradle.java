@@ -1,5 +1,20 @@
 package org.example;
 
+/**
+Создайте аккаунт на github.com (если еще нет)
+Создайте репозиторий для домашних работ
+Сделайте checkout репозитория на свой компьютер
+Создайте локальный бранч hw01-gradle
+Создать проект gradle
+В проект добавьте последнюю версию зависимости  guava com.google.guava
+Создайте модуль hw01-gradle
+В модуле сделайте класс HelloGradle
+В этом классе сделайте вызов какого-нибудь метода из guava
+Создайте "толстый-jar"
+Убедитесь, что "толстый-jar" запускается.
+Сделайте pull-request в gitHub
+*/
+
 import com.google.common.base.Strings;
 
 public class HelloGradle {

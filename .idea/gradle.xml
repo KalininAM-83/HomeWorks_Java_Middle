@@ -16,6 +16,9 @@
             <option value="$PROJECT_DIR$/hw09_Creational_patterns" />
             <option value="$PROJECT_DIR$/hw10.1_Patterns" />
             <option value="$PROJECT_DIR$/hw10.2_Patterns" />
+            <option value="$PROJECT_DIR$/hw17_JMM_Volatile_HappensBefore_LockFreeAlgoritm" />
+            <option value="$PROJECT_DIR$/hw21_Executor" />
+            <option value="$PROJECT_DIR$/hw22_CompletableFuture" />
             <option value="$PROJECT_DIR$/hw_01" />
             <option value="$PROJECT_DIR$/hw_08" />
             <option value="$PROJECT_DIR$/hw_21" />
